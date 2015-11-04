@@ -1,0 +1,29 @@
+[{
+  "id": "0",
+  "customerId": "1",
+  "created": "2014-13-13 17:01",
+  "pickup": "2014-13-13 18:00",
+  "products": [],
+  "status": "pickup"
+}, {
+  "id": "1",
+  "customerId": "2",
+  "created": "2014-13-13 17:02",
+  "pickup": "2014-13-13 18:00",
+  "products": [],
+  "status": "ongoing"
+}, {
+  "id": "2",
+  "customerId": "2",
+  "created": "2014-13-13 17:03",
+  "pickup": "2014-13-13 18:00",
+  "products": [],
+  "status": "delivery"
+}, {
+  "id": "3",
+  "customerId": "3",
+  "created": "2014-13-13 17:01",
+  "pickup": "2014-13-13 18:00",
+  "products": [],
+  "status": "pickup"
+}]

@@ -1,0 +1,27 @@
+[{
+  "customerId": "1",
+  "created": "2014-10-10 17:00",
+  "pickup": "2014-10-10 18:00",
+  "completed": "2014-10-10 19:00",
+  "delivered": "2014-10-11 19:00",
+  "products": [{
+    "id": "ordinary",
+    "count": 3
+  }, {
+    "id": "pickup",
+    "count": 1
+  }]
+}, {
+  "customerId": "2",
+  "created": "2014-10-10 17:00",
+  "pickup": "2014-10-10 18:00",
+  "completed": "2014-10-10 19:00",
+  "delivered": "2014-10-11 19:00",
+  "products": [{
+    "id": "sheet",
+    "count": 3
+  }, {
+    "id": "pickup",
+    "count": 1
+  }]
+}]
