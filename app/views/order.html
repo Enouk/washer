@@ -10,21 +10,31 @@
       <div class="container">
         <div class="row">
           <ul class="nav nav-pills nav-justified">
-            <li role="presentation" ng-click="pickups()" ng-class="{'active':selectedTab===TABS.PICKUPS}"><a>Hämtningar</a></li>
-            <li role="presentation" ng-click="ongoing()" ng-class="{'active':selectedTab===TABS.ONGOING}"><a>Pågående</a></li>
-            <li role="presentation" ng-click="deliveries()" ng-class="{'active':selectedTab===TABS.DELIVERY}"><a>Lämningar</a></li>
+            <li role="presentation" ng-click="showPickups()" ng-class="{'active':selectedTab===TABS.PICKUPS}">
+              <a>Hämtningar <span class="badge">{{count(FILTERS.PICKUPS)}}</span></a>
+            </li>
+            <li role="presentation" ng-click="showOngoing()" ng-class="{'active':selectedTab===TABS.ONGOING}">
+              <a>Pågående <span class="badge">{{count(FILTERS.ONGOING)}}</span></a>
+            </li>
+            <li role="presentation" ng-click="showDeliveries()" ng-class="{'active':selectedTab===TABS.DELIVERY}">
+              <a>Lämningar <span class="badge">{{count(FILTERS.DELIVERY)}}</span></a>
+            </li>
           </ul>
         </div>
         <div class="row">
           <div class="panel panel-default">
             <div class="panel-body">
               <ul class="list-group">
-                <li class="list-group-item" ng-repeat="o in orders | filter:statusFilter:status" ng-init="o.cust = getCustomer(o)">
+                <li class="list-group-item" ng-repeat="o in orders | filter:statusFilter:status">
                   <dl>
-                    <dt>Kundnummer</dt>
+                    <dt>Id: {{o.id}} 
+                      <span ng-if="o.status==FILTERS.PICKUPS" class="pull-right"><button ng-click="pickedup(o)"class="btn btn-success">Hämtad</button></span>
+                      <span ng-if="o.status==FILTERS.ONGOING" class="pull-right"><button ng-click="washed(o)" class="btn btn-success">Tvättad</button></span>
+                      <span ng-if="o.status==FILTERS.DELIVERY" class="pull-right"><button ng-click="delivered(o)" class="btn btn-success">Lämnad</button></span>
+                    </dt>
                     <dd>Skapad: {{o.created}}</dd>
-                    <dd>{{o.cust.firstName}}</dd>
-                    <dd>{{o.cust.address}}</dd>
+                    <dd>Kund: {{o.customer.firstName}} {{o.customer.lastName}}</dd>
+                    <dd>Adress: {{o.customer.address}}</dd>
                   </dl>
                 </li>
               </ul>

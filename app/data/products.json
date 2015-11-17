@@ -1,0 +1,63 @@
+[{
+  "id": "ordinary",
+  "name": "Vardagstvätt",
+  "description": "Vardagstvätt 5 kg"
+}, {
+  "id": "sheet",
+  "name": "Lakan",
+  "description": "Tvättning av lakan"
+}, {
+  "id": "sheet-mangel",
+  "name": "Manglade lakan",
+  "description": "Tvättning och mangling lakan"
+}, {
+  "id": "pillow",
+  "name": "Kudde",
+  "description": "Tvättning av kudde"
+}, {
+  "id": "pickup",
+  "name": "Hämtning/Lämning",
+  "description": "Hämtning och lämning vid dörr"
+}, {
+  "id": "small",
+  "name": "Lilla",
+  "price": 219,
+  "products": [{
+    "id": "ordinary",
+    "count": 1
+  }, {
+    "id": "sheet",
+    "count": 1
+  }, {
+    "id": "pickup",
+    "count": 1
+  }]
+}, {
+  "id": "middle",
+  "name": "Mellan",
+  "price": 329,
+  "products": [{
+    "id": "ordinary",
+    "count": 4
+  }, {
+    "id": "sheet-mangel",
+    "count": 1
+  }, {
+    "id": "pickup",
+    "count": 2
+  }]
+}, {
+  "id": "big",
+  "name": "Stora",
+  "price": 439,
+  "products": [{
+    "id": "ordinary",
+    "count": 6
+  }, {
+    "id": "sheet-mangel",
+    "count": 2
+  }, {
+    "id": "pickup",
+    "count": 2
+  }]
+}]

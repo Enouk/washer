@@ -1,1 +1,32 @@
-<p>This is the history view.</p>
+<home-navigation></home-navigation>
+<div class="navbar-offset">
+  <div class="container">
+    <div class="row">
+      <div class="page-header">
+        <h2 class="text-center">Order Historik</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <ul class="list-group">
+                <li class="list-group-item" ng-repeat="o in orders">
+                  <dl>
+                    <dt>Id: {{o.id}}</dt>
+                    <dd>Kund: {{o.customer.firstName}} {{o.customer.lastName}}</dd>
+                    <dd>Adress: {{o.customer.address}}</dd>
+                    <dd>Skapad: {{o.created}}</dd>
+                    <dd>Hämtad: {{o.pickup}}</dd>
+                    <dd>Lämnad: {{o.delivered}}</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

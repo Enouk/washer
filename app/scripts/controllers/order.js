@@ -13,9 +13,11 @@ angular.module('washerApp')
     $scope.FILTERS = {
       PICKUPS: 'pickup',
       ONGOING: 'ongoing',
-      DELIVERY: 'delivery'
+      DELIVERY: 'delivery',
+      DELIVERED: 'delivered'
     };
 
+    $scope.orders = [];
     $scope.selectedTab = $scope.TABS.PICKUPS;
     $scope.statusFilter = $scope.FILTERS.PICKUPS;
 
@@ -24,7 +26,7 @@ angular.module('washerApp')
       OrderService.getCurrent()
         .success(function(orders) {
           $scope.orders = orders;
-          $scope.pickups();
+          $scope.showPickups();
         })
         .error(function() {
           $scope.info = undefined;
@@ -34,19 +36,45 @@ angular.module('washerApp')
 
     $scope.init();
 
-    $scope.pickups = function() {
+    $scope.showPickups = function() {
       $scope.selectedTab = $scope.TABS.PICKUPS;
       $scope.statusFilter = $scope.FILTERS.PICKUPS;
     };
 
-    $scope.ongoing = function() {
+    $scope.showOngoing = function() {
       $scope.selectedTab = $scope.TABS.ONGOING;
       $scope.statusFilter = $scope.FILTERS.ONGOING;
     };
 
-    $scope.deliveries = function() {
+    $scope.showDeliveries = function() {
       $scope.selectedTab = $scope.TABS.DELIVERY;
       $scope.statusFilter = $scope.FILTERS.DELIVERY;
+    };
+
+    $scope.count = function(status) {
+
+      var count = 0;
+
+      for (var i = 0; i < $scope.orders.length; i++) {
+
+        if ($scope.orders[i].status === status) {
+          count += 1;
+        }
+      }
+
+      return count;
+    };
+
+    $scope.pickedup = function(order) {
+      order.status = $scope.FILTERS.ONGOING;
+    };
+
+    $scope.washed = function(order) {
+      order.status = $scope.FILTERS.DELIVERY;
+    };
+
+    $scope.delivered = function(order) {
+      order.status = $scope.FILTERS.DELIVERED;
     };
 
     $scope.getCustomer = function() {

@@ -1,27 +1,47 @@
 [{
   "id": "0",
-  "customerId": "1",
+  "customer": {
+    "id": "1",
+    "firstName": "Adam",
+    "lastName": "Nilsson",
+    "address": "Almvägen 9, 360 50 Växjö"
+  },
   "created": "2014-13-13 17:01",
   "pickup": "2014-13-13 18:00",
   "products": [],
   "status": "pickup"
 }, {
   "id": "1",
-  "customerId": "2",
+  "customer": {
+    "id": "1",
+    "firstName": "Adam",
+    "lastName": "Nilsson",
+    "address": "Almvägen 9, 360 50 Växjö"
+  },
   "created": "2014-13-13 17:02",
   "pickup": "2014-13-13 18:00",
   "products": [],
   "status": "ongoing"
 }, {
   "id": "2",
-  "customerId": "2",
+  "customer": {
+    "id": "2",
+    "firstName": "Eva",
+    "lastName": "Bengtsson",
+    "address": "Almvägen 12, 360 50 Växjö"
+  },
   "created": "2014-13-13 17:03",
   "pickup": "2014-13-13 18:00",
   "products": [],
   "status": "delivery"
 }, {
   "id": "3",
-  "customerId": "3",
+  "customer": {
+    "id": "2",
+    "firstName": "Eva",
+    "lastName": "Bengtsson",
+    "address": "Almvägen 12, 360 50 Växjö"
+  },
   "created": "2014-13-13 17:01",
   "pickup": "2014-13-13 18:00",
   "products": [],
