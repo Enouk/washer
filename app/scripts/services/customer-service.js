@@ -5,7 +5,7 @@ angular.module('washerApp')
   .service('customerService', function($http) {
 
     this.getAll = function() {
-      return $http.get('washer/data/customers.json');
+      return $http.get('data/customers.json');
     };
 
   });
